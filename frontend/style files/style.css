@@ -1,0 +1,289 @@
+body {
+    margin: 0px;
+
+}
+
+.navigation-bar {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    /* border: 2px solid black; */
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(100px);
+
+}
+
+.logoImage {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 100px;
+}
+
+.navigation {
+    height: 40px;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.navigation span a{
+    font-family: cursive;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    list-style: none;
+    text-decoration: none;
+}
+
+
+@keyframes text-gradient-shift {
+    0% {
+        color: rgb(12, 244, 151);
+    }
+
+    50% {
+        color: rgb(130, 243, 18);
+    }
+
+    100% {
+        color: rgb(16, 213, 190);
+    }
+}
+
+.navigation span:hover {
+    font-family: cursive;
+    font-style: oblique;
+
+    transition: 0.4s;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255);
+}
+
+#vantajsCloudBackground {
+    height: 100vh;
+}
+
+.homePageSection {
+    display: flex;
+    height: 85%;
+    width: 100%;
+    background: blur(50px);
+    /* border: 2px solid black; */
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.homePageContent {
+    display: flex;
+    height: 70%;
+    width: 50%;
+    /* border: 2px solid black; */
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+    /* align-items: center; */
+    flex-direction: column;
+    box-shadow: 2px 2px 20px white;
+    padding: 50px;
+    transition: 1s;
+}
+.homePageContent:hover {
+    display: flex;
+    height: 70%;
+    width: 50%;
+    /* border: 2px solid black; */
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+    /* align-items: center; */
+    flex-direction: column;
+    box-shadow: 2px 2px 20px white,2px 2px 20px rgb(53, 215, 255),2px 2px 20px white,2px 2px 20px white;
+    padding: 50px;
+    transition: 1s all;
+}
+
+
+.homePageContent p {
+    font-family: cursive;
+    font-size: 20px;
+}
+
+
+.movingLetter {
+
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 3px solid;  */
+    width: 0;
+    animation:typing 10s linear infinite;
+    /* blink 0.1s  infinite; */
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 500px;
+    }
+
+    100% {
+        width: 0px;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+.cardContainer {
+    display: flex;
+    height: 60%;
+    width: 20%;
+   justify-content:center ;
+    padding: 20px;
+    border-radius: 50px;
+ 
+  --filter-glass3d: blur(5px) brightness(1.08) saturate(1.6); 
+  /* --color-glass3d: hsl(160, 6%, 90%);  */
+  --noise-glass3d: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png"); 
+
+  position: relative; 
+  z-index: 4; 
+    transition: 1s;
+    overflow: hidden;
+    flex-direction:column;
+    align-items: center;
+        box-shadow: 2px 2px 20px white;
+
+}
+.cardContainer:hover{
+    transition: 1s;
+    box-shadow: 2px 2px 20px white,2px 2px 20px rgb(53, 215, 255),2px 2px 20px white,2px 2px 20px white;
+
+}
+
+.cardContainer::before { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  pointer-events: none; 
+  border-radius: inherit; 
+  overflow: hidden; 
+  z-index: 3; 
+  
+  -webkit-backdrop-filter: var(--filter-glass3d); 
+  backdrop-filter: var(--filter-glass3d); 
+  background-color: var(--color-glass3d); 
+  background-image: var(--noise-glass3d); 
+  background-size: 100px; 
+  background-repeat: repeat; 
+}
+
+.cardContainer::after { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  pointer-events: none; 
+  border-radius: inherit; 
+  overflow: hidden; 
+  z-index: 5; 
+  
+  box-shadow: 
+    inset 2px 2px 1px -3px hsl(205 20% 90% / 0.8), 
+    inset 4px 4px 2px -6px hsl(205 20% 90% / 0.3), 
+    inset 1.5px 1.5px 1.5px -0.75px hsl(205 20% 90% / 0.15), 
+    inset 1.5px 1.5px 0.25px hsl(205 20% 90% / 0.03), 
+    inset 0 0 0.25px 0.5px hsl(205 20% 90% / 0.03); 
+}
+
+.cardContainer > * { 
+  position: relative; 
+  z-index: 6; 
+}
+
+.card{
+    height: 350px;
+    width: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    font-family: cursive;
+
+    /* Liquid Glass Effect */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.1);
+
+    position: relative;
+    overflow: hidden;
+
+    display: none;
+    
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+
+    width: 200%;
+    height: 200%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.35),
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.25)
+    );
+
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+.card img{
+    height: 150px;
+    width: 150px;
+    border-radius: 30px;
+    /* animation: circle-effect 10s linear infinite; */
+
+}
+
+@keyframes circle-effect {
+    from{
+        
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
